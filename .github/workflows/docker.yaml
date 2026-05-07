@@ -65,9 +65,6 @@ jobs:
             # On main: tag with semver version + latest
             type=raw,value=${{ needs.semantic-release.outputs.new_release_version }},enable=${{ github.ref == 'refs/heads/main' }}
             type=raw,value=latest,enable=${{ github.ref == 'refs/heads/main' }}
-            # On release branch: tag with branch name + sha
-            type=ref,event=branch,enable=${{ github.ref == 'refs/heads/release' }}
-            type=sha,enable=${{ github.ref == 'refs/heads/release' }}
 
       - name: Build and push Docker image
         id: push
