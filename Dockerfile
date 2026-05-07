@@ -10,4 +10,5 @@ ENV UV_NO_DEV=1
 WORKDIR /app
 RUN uv sync --locked
 
-CMD ["uv", "run", "stock-bot"]
+# Run the installed package directly from the virtual environment
+CMD [".venv/bin/stock-bot"]

@@ -24,14 +24,14 @@ def format_message_json(stock_info: ETFInfo) -> dict:
                 "fields": [
                     {
                         "name": "Market Change (Percent)",
-                        "value": f"{stock_info.regularMarketChange} ({stock_info.regularMarketChangePercent}%)",
+                        "value": f"{stock_info.regularMarketChange:.2f} ({stock_info.regularMarketChangePercent:.2f}%)",
                     },
                     {
                         "name": "Market Price",
-                        "value": f"€{stock_info.regularMarketPrice:}",
+                        "value": f"€{stock_info.regularMarketPrice:.2f}",
                     },
-                    {"name": "Day Low", "value": f"€{stock_info.dayLow}"},
-                    {"name": "Day High", "value": f"€{stock_info.dayHigh}"},
+                    {"name": "Day Low", "value": f"€{stock_info.dayLow:.2f}"},
+                    {"name": "Day High", "value": f"€{stock_info.dayHigh:.2f}"},
                 ],
                 "author": {"name": "Yahoo Finance"},
             }
