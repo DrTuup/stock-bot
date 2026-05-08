@@ -15,3 +15,4 @@ def main():
 
     payload = format_message_json(stock_info)
     send_discord_notification(payload)
+    logger.info("Notification sent successfully.")
